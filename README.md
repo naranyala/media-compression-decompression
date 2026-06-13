@@ -220,6 +220,39 @@ Data compression is the process of encoding information using fewer bits than th
 - **[python-isal](https://github.com/pycompression/python-isal)** - Python bindings for Intel's ISA-L.
 - **[python-zlib-ng](https://github.com/pycompression/python-zlib-ng)** - Drop-in replacement for zlib using zlib-ng.
 
+#### Java / JVM
+- **[Apache Commons Compress](https://github.com/apache/commons-compress)** - Unified API for many formats (ZIP, TAR, Gzip, Zstd, etc.).
+- **[lz4-java](https://github.com/lz4/lz4-java)** - High-speed JNI and pure Java bindings for LZ4.
+- **[snappy-java](https://github.com/xerial/snappy-java)** - Fast Snappy compression/decompression for Java.
+- **[Zip4j](https://github.com/srikanth-lingala/zip4j)** - Advanced ZIP-specific features (encryption, spanning).
+
+#### JavaScript / TypeScript
+- **[fflate](https://github.com/101arrowz/fflate)** - High-performance, tiny pure JS compression library.
+- **[pako](https://github.com/nodeca/pako)** - Reliable Zlib port for JS (browser/Node.js).
+- **[JSZip](https://github.com/Stuk/jszip)** - Create, read and edit .zip files with Javascript.
+- **[lz-string](https://github.com/pieroxy/lz-string)** - Optimized for localStorage string compression.
+
+#### C# / .NET
+- **[SharpCompress](https://github.com/adamhathcock/sharpcompress)** - Fully managed library for RAR, 7Zip, Zip, Tar, etc.
+- **[EasyCompressor](https://github.com/mjebrahimi/EasyCompressor)** - Unified interface for LZ4, Snappy, Zstd, and more.
+- **[K4os.Compression.LZ4](https://github.com/MiloszKrajewski/K4os.Compression.LZ4)** - High-performance LZ4 implementation for .NET.
+
+#### Ruby
+- **[ruby-zstd](https://github.com/facebook/zstd/tree/dev/contrib/ruby)** - Official Zstandard bindings for Ruby.
+- **[lz4-ruby](https://github.com/komiya-atsushi/lz4-ruby)** - High-speed LZ4 bindings for Ruby.
+
+#### PHP
+- **[UnifiedArchive](https://github.com/wapmorgan/UnifiedArchive)** - Abstract API for many archive formats.
+- **[ZipStream-PHP](https://github.com/maennchen/ZipStream-PHP)** - Stream ZIP files directly to users without disk storage.
+
+#### Swift / Apple Platforms
+- **[SWCompression](https://github.com/tsolomko/SWCompression)** - Pure Swift framework for archives and compression.
+- **[DataCompression](https://github.com/mw99/DataCompression)** - Lightweight Swift extensions for data compression.
+
+---
+
+## 🛠️ Implementations
+
 ### Hardware Acceleration
 *Offloading compression to specialized hardware.*
 
