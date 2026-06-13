@@ -23,6 +23,8 @@ Data compression is the process of encoding information using fewer bits than th
   - [Model Compression (ML Efficiency)](#model-compression-ml-efficiency)
 - [🛠️ Implementations](#-implementations)
   - [Libraries and Tools](#libraries-and-tools)
+  - [Columnar and Big Data](#columnar-and-big-data)
+  - [Disk Usage Analysis & Cleanup](#disk-usage-analysis--cleanup)
   - [Hardware Acceleration](#hardware-acceleration)
 - [📊 Analysis & Testing](#-analysis--testing)
   - [Benchmarking](#benchmarking)
@@ -184,14 +186,29 @@ Data compression is the process of encoding information using fewer bits than th
 ### Libraries and Tools
 *Software implementations and language-specific packages.*
 
-#### Command Line Utilities (CLI) & Archivers
-- **[7-Zip](https://www.7-zip.org/)** - Open source file archiver with extremely high compression ratios.
-- **[pigz](https://zlib.net/pigz/)** - A parallel implementation of gzip for multi-core systems.
-- **[pbzip2](https://launchpad.net/pbzip2)** - A parallel implementation of the bzip2 block-sorting compressor.
-- **[pxz](https://github.com/jnovy/pxz)** - Parallel LZMA compression for XZ files.
-- **[lzop](https://www.lzop.org/)** - A very fast file compressor based on the LZO library.
-- **[ZPAQ](http://mattmahoney.net/dc/zpaq.html)** - Incremental journaling archiver using PAQ context mixing.
-- **[squashfs-tools](https://github.com/plougher/squashfs-tools)** - Tools for creating highly compressed read-only filesystems.
+#### Desktop & GUI Archivers (End-User Tools)
+*Applications designed for daily desktop use, covering both Open-Source and Commercial software.*
+
+- **[7-Zip](https://www.7-zip.org/)** (🪟) `[Open-Source]` - The gold standard for Windows; extremely high compression in `.7z` format.
+- **[WinRAR](https://www.rarlab.com/)** (🪟 🍎 🐧) `[Paid/Shareware]` - Famous for `.rar` format and excellent data recovery records.
+- **[PeaZip](https://peazip.github.io/)** (🪟 🍎 🐧) `[Open-Source]` - Feature-rich cross-platform archiver with a unified UI.
+- **[Keka](https://www.keka.io/)** (🍎) `[Open-Source]` - The most popular modern macOS archiver (Free from web, paid on App Store).
+- **[Bandizip](https://en.bandisoft.com/bandizip/)** (🪟 🍎) `[Paid/Freemium]` - Fast archiver with modern UI and multi-core support.
+- **[WinZip](https://www.winzip.com/)** (🪟 🍎) `[Paid]` - Enterprise-focused suite with cloud and security integration.
+- **[BetterZip](https://macitbetter.com/)** (🍎) `[Paid]` - Professional, feature-packed archive manager for macOS.
+- **[The Unarchiver](https://theunarchiver.com/)** (🍎) `[Freeware]` - Simple macOS tool that unarchives almost any format instantly.
+- **[NanaZip](https://github.com/M2Team/NanaZip)** (🪟) `[Open-Source]` - Modern 7-Zip derivative optimized for Windows 11.
+
+#### Command Line Utilities (CLI) & Core Tools
+*Lower-level tools typically used by developers, in automation, or on servers.*
+
+- **[pigz](https://zlib.net/pigz/)** (🐧 🍎) `[Open-Source]` - Parallel implementation of gzip for multi-core systems.
+- **[pbzip2](https://launchpad.net/pbzip2)** (🐧 🍎) `[Open-Source]` - Parallel implementation of the bzip2 block-sorting compressor.
+- **[pxz](https://github.com/jnovy/pxz)** (🐧) `[Open-Source]` - Parallel LZMA compression for XZ files.
+- **[lzop](https://www.lzop.org/)** (🪟 🐧 🍎) `[Open-Source]` - Very fast file compressor based on the LZO library.
+- **[ZPAQ](http://mattmahoney.net/dc/zpaq.html)** (🪟 🐧 🍎) `[Open-Source]` - Incremental journaling archiver using PAQ context mixing.
+- **[squashfs-tools](https://github.com/plougher/squashfs-tools)** (🐧) `[Open-Source]` - Tools for creating highly compressed read-only filesystems.
+- **[p7zip](https://github.com/p7zip-project/p7zip)** (🐧 🍎) `[Open-Source]` - Command-line port of 7-Zip for POSIX systems.
 
 #### Media Optimization Tools
 - **[FFmpeg](https://ffmpeg.org/)** - The Swiss army knife for audio and video processing.
@@ -256,7 +273,32 @@ Data compression is the process of encoding information using fewer bits than th
 - **[SWCompression](https://github.com/tsolomko/SWCompression)** - Pure Swift framework for archives and compression.
 - **[DataCompression](https://github.com/mw99/DataCompression)** - Lightweight Swift extensions for data compression.
 
----
+### Disk Usage Analysis & Cleanup
+*Tools to identify large files and manage storage, helping decide what needs compression.*
+
+#### 🔓 Open Source & Freeware Tools (GUI)
+- **[WinDirStat](https://windirstat.net/)** (🪟) `[Open-Source]` - The classic disk usage visualizer with a treemap view for Windows.
+- **[SpaceSniffer](http://www.uderzo.it/main_products/space_sniffer/)** (🪟) `[Freeware]` - Portable, very visual treemap disk analyzer for Windows.
+- **[Baobab](https://wiki.gnome.org/Apps/DiskUsageAnalyzer)** (🐧) `[Open-Source]` - GNOME's default disk usage analyzer; clean and simple.
+- **[Filelight](https://apps.kde.org/filelight/)** (🐧 🪟) `[Open-Source]` - KDE's visualizer using concentric pie charts.
+- **[GrandPerspective](https://grandperspectiv.sourceforge.net/)** (🍎) `[Open-Source]` - Lightweight treemap visualizer for macOS.
+- **[Disk Inventory X](https://www.derlien.com/)** (🍎) `[Open-Source]` - Another classic treemap utility for macOS.
+- **[QDirStat](https://github.com/hosiet/qdirstat)** (🐧 🪟 🍎) `[Open-Source]` - Powerful cross-platform GUI tool with built-in cleanup actions.
+- **[OmniDiskSweeper](https://www.omnigroup.com/more)** (🍎) `[Freeware]` - No-frills, fast list-based scanner for Mac.
+
+#### 💰 Commercial & Freemium Tools (GUI)
+- **[WizTree](https://diskanalyzer.com/)** (🪟) `[Freemium]` - The absolute fastest disk analyzer for Windows (reads MFT directly).
+- **[TreeSize](https://www.jam-software.com/treesize_free)** (🪟) `[Freemium]` - Powerful, professional-grade disk space manager.
+- **[DaisyDisk](https://daisydiskapp.com/)** (🍎) `[Paid]` - Beautiful, fast "sunburst" chart visualizer for macOS.
+
+#### ⌨️ CLI / TUI Tools (Cross-Platform)
+- **[ncdu](https://dev.yorhel.nl/ncdu)** (🐧 🍎) `[Open-Source]` - The standard ncurses-based disk usage analyzer for terminal users.
+- **[gdu](https://github.com/dundee/gdu)** (🪟 🐧 🍎) `[Open-Source]` - Extremely fast analyzer written in Go, optimized for SSDs.
+- **[dust](https://github.com/bootandy/dust)** (🪟 🐧 🍎) `[Open-Source]` - A more intuitive, colorful Rust-based version of `du`.
+- **[duf](https://github.com/muesli/duf)** (🪟 🐧 🍎) `[Open-Source]` - A modern, colorful replacement for the `df` command.
+- **[duc](https://duc.zevv.nl/)** (🐧 🍎) `[Open-Source]` - A comprehensive collection of tools for inspecting disk usage (CLI, Ncurses, and GUI).
+
+### Hardware Acceleration
 
 ## 🛠️ Implementations
 
