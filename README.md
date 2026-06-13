@@ -34,6 +34,7 @@ Data compression is the process of encoding information using fewer bits than th
   - [Journals and Publications](#journals-and-publications)
   - [Engineering Blogs](#engineering-blogs)
   - [Blogs and Web Resources](#blogs-and-web-resources)
+  - [Videos and Talks](#videos-and-talks)
   - [Community and Conferences](#community-and-conferences)
 
 ---
@@ -51,6 +52,12 @@ Data compression is the process of encoding information using fewer bits than th
 - **[Prediction by Partial Matching (PPM)](https://en.wikipedia.org/wiki/Prediction_by_partial_matching)** - An adaptive statistical data compression technique based on context modeling.
 - **[Context Mixing](https://en.wikipedia.org/wiki/Context_mixing)** - A type of compression where predictions from multiple independent models are combined (e.g., PAQ).
 - **[The Hitchhiker's Guide to Compression](https://github.com/encode/hitchhikers-guide-to-compression)** - A comprehensive guide and repository of lossless compression algorithms.
+- **[Suffix Trees](https://en.wikipedia.org/wiki/Suffix_tree)** - A compressed trie used for efficient string matching and BWT.
+- **[LZO (Lempel–Ziv–Oberhumer)](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Oberhumer)** - Lossless algorithm focused on extreme decompression speed.
+- **[Delta Encoding](https://en.wikipedia.org/wiki/Delta_encoding)** - Storing data as differences between sequential points.
+- **[Run-Length Encoding (RLE)](https://en.wikipedia.org/wiki/Run-length_encoding)** - Simple compression replacing runs of data with value and count.
+- **[Quantization](https://en.wikipedia.org/wiki/Quantization_(signal_processing))** - Mapping large input sets to smaller discrete sets; core of lossy compression.
+- **[Rate-Distortion Theory](https://en.wikipedia.org/wiki/Rate%E2%80%93distortion_theory)** - The branch of information theory that addresses the problem of lossy compression.
 
 ### Seminal Papers
 *The theoretical foundations of modern compression.*
@@ -320,12 +327,44 @@ Data compression is the process of encoding information using fewer bits than th
 - **[Netflix Tech Blog](https://netflixtechblog.com/)** - Video encoding and data warehouse efficiency.
 - **[Dropbox Tech Blog](https://dropbox.tech/infrastructure)** - Masters of storage and makers of Lepton.
 
+### Wikipedia Articles
+*Comprehensive overviews and starting points for deep dives.*
+
+- **[Data Compression](https://en.wikipedia.org/wiki/Data_compression)** - The main article covering history, uses, and outlook.
+- **[Lossless Compression](https://en.wikipedia.org/wiki/Lossless_compression)** - Deep dive into exact data reconstruction techniques.
+- **[Lossy Compression](https://en.wikipedia.org/wiki/Lossy_compression)** - Explains perceptual coding and acceptable data discarding.
+- **[Dictionary Coder](https://en.wikipedia.org/wiki/Dictionary_coder)** - How substring replacement algorithms operate.
+- **[Entropy Encoding](https://en.wikipedia.org/wiki/Entropy_encoding)** - The math and theory behind bit-level compression.
+- **[Run-length Encoding (RLE)](https://en.wikipedia.org/wiki/Run-length_encoding)** - One of the simplest and oldest forms of lossless data compression.
+- **[Transform Coding](https://en.wikipedia.org/wiki/Transform_coding)** - The foundation of most audio and image compression formats (like DCT).
+- **[Audio Coding Format](https://en.wikipedia.org/wiki/Audio_coding_format)** - Standardizations for storing digital audio.
+- **[Video Coding Format](https://en.wikipedia.org/wiki/Video_coding_format)** - Comprehensive list of standards for digital video.
+
 ### Blogs and Web Resources
 - **[Matt Mahoney's Data Compression Programs](http://mattmahoney.net/dc/)** - Rich repository of software and benchmarks.
-- **[Fast Compression Blog](http://fastcompression.blogspot.com/)** - Yann Collet's blog (LZ4/Zstd creator).
+- **[Fast Compression Blog](http://fastcompression.blogspot.com/)** - Yann Collet's blog (LZ4/Zstd creator). Specifically check out his posts on *Branchless Coding*.
 - **[cbloom rants](https://cbloomrants.blogspot.com/)** - Charles Bloom's technical analysis (Oodle creator).
 - **[The ryg blog](https://fgiesen.wordpress.com/)** - Fabian Giesen's series on entropy coding.
-- **[Compression.ru](http://www.compression.ru/index_en.htm)** - Large resource for video compression.
+- **[Compression.ru](http://www.compression.ru/index_en.htm)** - Large resource for video compression and codecs evaluation.
+- **[An Explanation of the DEFLATE Algorithm](https://zlib.net/feldspar.html)** - The "classic" deep dive into how Gzip/Deflate works.
+- **[Brotli Internals](https://blog.cloudflare.com/introducing-brotli-compression-for-cloudflare-free-beta/)** - Cloudflare's technical breakdown of Brotli vs Gzip.
+- **[Understanding Gzip](https://za3k.com/blog/2012-08-05-understanding-gzip/)** - A hands-on look at Gzip's binary structure.
+- **[How PNG Works](https://www.w3.org/TR/PNG/)** - W3C's very readable specification and rationale behind PNG's design choices.
+- **[Everything You Need to Know About JPEG Compression](https://www.smashingmagazine.com/2015/06/efficient-image-resizing-with-imagemagick/)** - Practical blog post breaking down how to optimize imagery.
+
+### Videos and Talks
+*Educational videos and high-quality conference presentations.*
+
+- **[How does Data Compression Work? (Lossless vs Lossy) (Branch Education)](https://www.youtube.com/watch?v=Lto-ajuqW3w)** - Highly animated and visual explanation of compression fundamentals.
+- **[How Computers Compress Text (Tom Scott)](https://www.youtube.com/watch?v=JsTptu56GM8)** - Clear explanation of Huffman coding.
+- **[Why Confetti is a Nightmare for Video Compression (Tom Scott)](https://www.youtube.com/watch?v=r6Rp-uo6HmI)** - Explains interframe compression and bitrate limits.
+- **[Elegant Compression in Text: LZ77 (Computerphile)](https://www.youtube.com/watch?v=goOa3DGezUA)** - Visual deep dive into Lempel-Ziv.
+- **[Lempel-Ziv-Welch (LZW) Compression (Computerphile)](https://www.youtube.com/watch?v=JcqwmXOA9bM)** - How dynamic dictionary building works.
+- **[Huffman Trees, Compression & Textuality (Computerphile)](https://www.youtube.com/watch?v=umTbivyJoiI)** - Deep dive into frequency analysis.
+- **[The Unreasonable Effectiveness of JPEG (Reducible)](https://www.youtube.com/watch?v=0me3guauqOU)** - Beautiful visual explanation of the math behind JPEG.
+- **[Designing Data Compression Solutions (Yann Collet)](https://www.youtube.com/watch?v=gZikN5hhlxA)** - Stanford lecture by the creator of Zstandard and LZ4.
+- **[JPEG Files & Colour (Computerphile)](https://www.youtube.com/watch?v=n_uNPbdenRs)** - Understanding DCT and quantization in images.
+- **[Audio Compression (Computerphile)](https://www.youtube.com/watch?v=KjzxkO9WzGA)** - Psychoacoustics and how MP3 discards data.
 
 ### Community and Conferences
 - **[DCC (Data Compression Conference)](https://datacompressions.com/dcc/)** - The premier academic conference.
